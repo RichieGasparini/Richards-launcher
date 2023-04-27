@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+  background-color: #333;
+}
+
+.game-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h1 {
+  color: white;
+}
