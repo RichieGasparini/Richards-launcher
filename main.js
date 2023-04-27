@@ -1,4 +1,7 @@
-const { app, BrowserWindow, Menu } = require("electron");
+const { app, BrowserWindow } = require("electron");
+const { initialize, enable } = require("@electron/remote/main");
+
+initialize();
 
 let mainWindow;
 
@@ -6,21 +9,17 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 650,
+    frame: false,
     webPreferences: {
       nodeIntegration: true,
+      contextIsolation: false,
+      enableRemoteModule: true,
     },
   });
 
+  enable(mainWindow.webContents);
+
   mainWindow.loadFile("index.html");
-
-  const defaultMenu = Menu.getApplicationMenu();
-
-  const newMenuItems = defaultMenu.items.filter(
-    (menuItem) => menuItem.role !== "editmenu" && menuItem.role !== "help"
-  );
-
-  const newMenu = Menu.buildFromTemplate(newMenuItems);
-  Menu.setApplicationMenu(newMenu);
 }
 
 app.whenReady().then(createWindow);

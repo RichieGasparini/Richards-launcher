@@ -3,6 +3,8 @@ body {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  justify-content: center;
+  margin: 38px;
 }
 
 /* Score/Time Display and Button Styling */
