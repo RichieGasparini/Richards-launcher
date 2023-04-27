@@ -11,3 +11,25 @@ body {
 h1 {
   color: white;
 }
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid white; */
+}
+
+.game-img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: -15px;
+}
+
+.game-img:hover {
+  width: 250px;
+  height: 250px;
+}
+
+.game:hover {
+  font-size: 25px;
+}

@@ -14,7 +14,6 @@ function createWindow() {
   mainWindow.loadFile("index.html");
 
   const defaultMenu = Menu.getApplicationMenu();
-  console.log(defaultMenu);
 
   const newMenuItems = defaultMenu.items.filter(
     (menuItem) => menuItem.role !== "editmenu" && menuItem.role !== "help"
