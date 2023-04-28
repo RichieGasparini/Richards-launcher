@@ -24,12 +24,12 @@ function createWindow() {
   mainWindow.on("resize", () => {
     let size = mainWindow.getBounds();
 
-    if (size.width < 600) {
-      size.width = 600;
+    if (size.width < 800) {
+      size.width = 800;
     }
 
-    if (size.height < 600) {
-      size.height = 600;
+    if (size.height < 650) {
+      size.height = 650;
     }
 
     mainWindow.setBounds(size);
