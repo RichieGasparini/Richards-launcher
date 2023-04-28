@@ -40,8 +40,8 @@ h1 {
 }
 
 .game:hover img {
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
   box-shadow: 7px 7px 5px #ccc;
 }
 
@@ -51,7 +51,7 @@ h1 {
   display: flex;
   justify-content: flex-end;
   -webkit-app-region: drag;
-  border: #5f5f5f 2px solid;
+  border: #5f5f5f 1px solid;
   box-shadow: 0px 1px 1px #707070;
 }
 
