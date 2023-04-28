@@ -20,6 +20,20 @@ function createWindow() {
   enable(mainWindow.webContents);
 
   mainWindow.loadFile("index.html");
+
+  mainWindow.on("resize", () => {
+    let size = mainWindow.getBounds();
+
+    if (size.width < 600) {
+      size.width = 600;
+    }
+
+    if (size.height < 600) {
+      size.height = 600;
+    }
+
+    mainWindow.setBounds(size);
+  });
 }
 
 app.whenReady().then(createWindow);
