@@ -128,7 +128,10 @@ function update() {
       lumberjack.anims.play("standing", true);
     }
   }
-  if (spaceBar.isDown || (cursors.up.isDown && lumberjack.body.onFloor())) {
+  if (
+    (spaceBar.isDown && lumberjack.body.onFloor()) ||
+    (cursors.up.isDown && lumberjack.body.onFloor())
+  ) {
     lumberjack.setVelocityY(-330);
     lumberjack.anims.play("jumping");
   }
