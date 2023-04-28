@@ -6,18 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Whack-a-Mole</title>
     <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <a href="../index.html">Return Home</a>
+    <header class="navbar">
+      <a href="../index.html"
+        ><button id="home"><i class="fa-solid fa-house"></i></button
+      ></a>
+      <button id="dev-console"><i class="fa-solid fa-terminal"></i></button>
+      <button id="reload">
+        <i class="fa-solid fa-arrow-rotate-right"></i>
+      </button>
+      <button id="close">
+        <i class="fa-sharp fa-solid fa-rectangle-xmark"></i>
+      </button>
+    </header>
     <div id="game">
-      <header>
+      <div id="game-header">
         <h2>Your Score:</h2>
         <h2 id="score"></h2>
         <h2>Time left:</h2>
         <h2 id="timer"></h2>
         <h2 id="rules">Score 25 Points To Win!</h2>
         <button id="start">Start!</button>
-      </header>
+      </div>
       <div class="grid">
         <div class="square" id="hole1"></div>
         <div class="square" id="hole2"></div>
@@ -30,6 +48,7 @@
         <div class="square" id="hole9"></div>
       </div>
     </div>
+    <script src="../renderer.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

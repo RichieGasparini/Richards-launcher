@@ -59,7 +59,7 @@ startButton.addEventListener("click", function () {
   scoreBoard.textContent = score;
   timeLeft = 20;
   timer.textContent = timeLeft;
-  rules.textContent = "Score 25 Points To Win!";
+  rules.textContent = "Score 15 Points To Win!";
   timerID = setInterval(randomizeHole, 750); //Start randomizing hole
   countDownTimerId = setInterval(countDown, 1000); //Start timer
 });
@@ -77,12 +77,12 @@ function countDown() {
       hole.classList.remove("mole");
     });
     //Let player know if they won or lost
-    if (score >= 25) {
-      alert("You won!!! You scored: " + score);
-      rules.textContent = "Good Job! Press Start to play again.";
+    if (score >= 15) {
+      // alert("You won!!! You scored: " + score);
+      rules.textContent = "You won!!! You scored: " + score;
     } else {
-      alert("Game Over! You Scored: " + score);
-      rules.textContent = "Nice try. Press Start to play again.";
+      // alert("Game Over! You Scored: " + score);
+      rules.textContent = "Game Over! You Scored: " + score;
     }
   }
 }
